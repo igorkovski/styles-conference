@@ -55,24 +55,6 @@ body {
 }
 
 /*
-  ========================================
-  Links
-  ========================================
-*/
-
-a {
-  color: #648880;
-  text-decoration: none;
-}
-a:hover {
-  color: #a9b2b9;
-}
-p a {
-  border-bottom: 1px solid #dfe2e5;
-}
-
-
-/*
 Site Grid
 */
 
@@ -95,24 +77,37 @@ Site Grid
   padding-right: 30px;
 }
 
-.col-1-3 {
-  width: 33%;
-}
-.col-2-3 {
-  width: 66%;
-}
-
-.col-1-3,
-.col-2-3 {
-  display: inline-block;
-  vertical-align: top;
-}
-
 .grid,
 .col-1-3,
 .col-2-3 {
   padding-left: 15px;
   padding-right: 15px;
+}
+.col-1-3,
+.col-2-3 {
+  display: inline-block;
+  vertical-align: top;
+}
+.col-1-3 {
+  width: 33.33%;
+}
+.col-2-3 {
+  width: 66.66%;
+}
+
+/*  Clearfix  */
+
+.group:before,
+.group:after {
+  content: "";
+  display: table;
+}
+.group:after {
+  clear: both;
+}
+.group {
+  clear: both;
+  *zoom: 1;
 }
 
 /* Typography */
@@ -151,7 +146,18 @@ em {
   font-style: italic;
 }
 
+/*  Links  */
 
+a {
+  color: #648880;
+  text-decoration: none;
+}
+a:hover {
+  color: #a9b2b9;
+}
+p a {
+  border-bottom: 1px solid #dfe2e5;
+}
 
 /* Buttons */
 
@@ -164,21 +170,6 @@ em {
 .btn-alt {
   border: 1px solid #dfe2e5;
   padding: 10px 30px;
-}
-
-/*  Clearfix  */
-
-.group:before,
-.group:after {
-  content: "";
-  display: table;
-}
-.group:after {
-  clear: both;
-}
-.group {
-  clear: both;
-  *zoom: 1;
 }
 
 /* Primary Header */
